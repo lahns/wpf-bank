@@ -1,0 +1,59 @@
+﻿<Window x:Class="bank.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bank"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="white">
+        <GroupBox Header="Panel klienta Ambergold" FontWeight="bold">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Grid.Column="0" Header="Wplaty">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Margin="20,0" x:Name="kwotaWplatyText">kwota wplaty</TextBlock>
+                            <TextBox Grid.Column="1" Grid.Row="0" Width="100" HorizontalAlignment="Left" x:Name="kwotaWplaty"></TextBox>
+                            <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" MaxWidth ="120" BorderBrush="White" BorderThickness="2" Background="#45b6fe" Click="wplacKase">Wplac</Button>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Column="1" Header="Przelewy">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center">number konta</TextBlock>
+                            <TextBox Grid.Column="1" Grid.Row="0" Width="100" HorizontalAlignment="Left" x:Name="numerKonta"></TextBox>
+                            <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="20,0" x:Name="kwotaPrzelewuText">kwota</TextBlock>
+                            <TextBox Grid.Column="1" Grid.Row="1" Width="100" HorizontalAlignment="Left" x:Name="kwotaPrzelewu"></TextBox>
+                            <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" MaxWidth ="120" BorderBrush="White" BorderThickness="2" Background="#45b6fe" Click="wykonajPrzelew">Wykonaj przelew</Button>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+                <Button Grid.Row="2" MaxHeight="40px" MaxWidth="200px" BorderBrush="White" BorderThickness="2" Background="#45b6fe" Click="pokazStanKonta">Sprawdz stan konta</Button>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
